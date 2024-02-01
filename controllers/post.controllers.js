@@ -70,7 +70,9 @@ function save(req, res, next) {
 function show(req, res, next) {
   const id = req.params.id;
   try {
-    models.Post.findByPk(id)
+    models.Post.findByPk(id, {
+      include:[models.User]
+    })
       .then((result) => {
         if (result) {
           res.status(200).json({
