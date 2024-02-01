@@ -30,6 +30,7 @@ function save(req, res, next) {
       optional: false,
     },
   };
+
   const v = new Validatior();
   let validationResponse = v.validate(post, schemea);
 
