@@ -7,7 +7,7 @@ function save(req, res, next) {
     content: req.body.content,
     imageUrl: req.body.imageUrl,
     categoryId: req.body.categoryId,
-    userId: 2,
+    userId: req.userData.userId,
   };
 
   const schemea = {
