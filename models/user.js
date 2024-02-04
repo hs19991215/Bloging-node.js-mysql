@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       User.hasOne(sequelize.define("Address")) //one to one relation
 
       User.hasMany(sequelize.define("Post")) //one to many
+      User.hasMany(sequelize.define("Comment")) //one to many
     }
   }
   User.init({

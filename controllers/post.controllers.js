@@ -72,6 +72,7 @@ function show(req, res, next) {
   try {
     models.Post.findByPk(id, {
       include:[models.User]
+      // include:[models.Comment]
     })
       .then((result) => {
         if (result) {
