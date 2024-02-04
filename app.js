@@ -9,7 +9,7 @@ const addressRoute = require("./routes/address.route");
 const app = express();
 
 app.use("/uploads", express.static("uploads"));
-app.use("/", (req, res, next) => {
+app.use("/check", (req, res, next) => {
     res.status(200).json({
         message: "Ok"
     })
