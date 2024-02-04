@@ -11,7 +11,7 @@ const app = express();
 app.use("/uploads", express.static("uploads"));
 app.use("/check", (req, res, next) => {
     res.status(200).json({
-        message: "Ok"
+        message: "Ok good"
     })
 })
 app.use("/posts", postRoute);
